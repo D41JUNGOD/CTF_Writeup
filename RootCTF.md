@@ -194,7 +194,7 @@ i 4 j n g i 9 4
 
 FLAG{MD5_3nCryPt_Ye@h!}
 
-##Vocabulary 460p (MISC)
+## Vocabulary 460p (MISC)
 
 ```
 플래그가 적힌 친구의 단어장을 잃어버렸다 
@@ -208,13 +208,34 @@ COpyiNg iS AlSO rEcOMMENDED. It MAy bE ..SupErStitiON, but it iS truE.IN ADDitiO
 ```
 
 HxD 로 열어보면 끝 쪽에 사진의 높이를 1000px로 변경해달라는 말이 있다. 
-이 파일은 확장자가 PNG이다. PNG는 기본적으로 파일헤더에 넓이와 높이를 설정할 수 있게 들어 있다. 750을 1000으로 바꾸어 주었다.
 
+이 파일은 확장자가 PNG이다. PNG는 기본적으로 파일헤더에 넓이와 높이를 설정할 수 있게 들어 있다. 변경해주면 된다.
 
-더 내려 가라네요!! 2000px로 바꾸어 주겠습니다.
-
+![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/pleas_find.png)
 
 FLAG : FLAG{_1vErticAl_2rEADiNg_3TAStlSb} 
+
+## Stage Game 229p (Reversing)
+
+```
+인내의 시간..
+Stage Level 1~10
+hint : Sleep
+```
+
+OllyDbg로 까보면 Stage를 구별할 수 있는 부분이 있습니다.
+
+![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/olly1.PNG)
+
+그리고 그 안을 스텝 인투로 들어가보면 결정적인 Sleep 함수가 있는 부분을 찾을 수 있다.
+
+![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/olly2.PNG)
+
+여기서 eax값을 0으로 바꾸어 주면 Sleep함수를 건너뛸 수 있다.
+
+이렇게 10stage까지가면 flag를 얻을 수 있다.
+
+Flag
 
 
 
