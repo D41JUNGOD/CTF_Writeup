@@ -7,7 +7,7 @@
 
 정답 형식 = FLAG{내용} 
 
-FLAG{Welcome_to_Seoul_Digitech_ROOT_CTF}
+FLAG : FLAG{Welcome_to_Seoul_Digitech_ROOT_CTF}
 ```
 
 ## Calculate 167p (MISC)
@@ -192,7 +192,7 @@ i 4 j n g i 9 4
 잘 생각해봐도 뭔지 모르겠었는데 3번째 힌트인 dog == 갯수라는 것을 보고 문화충격을 받았다. 
 바로 0은 4개 2는 1개 이런식의 조건을 모두 만족하는 문자열을 찾고 md5을 돌리면 flag가 나온다.
 
-FLAG{MD5_3nCryPt_Ye@h!}
+FLAG : FLAG{MD5_3nCryPt_Ye@h!}
 
 ## Vocabulary 460p (MISC)
 
@@ -225,7 +225,7 @@ hint : Sleep
 
 OllyDbg로 까보면 Stage를 구별할 수 있는 부분이 있습니다.
 
-![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/olly1.PNG)
+![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/pleas_find.PNG)
 
 그리고 그 안을 스텝 인투로 들어가보면 결정적인 Sleep 함수가 있는 부분을 찾을 수 있다.
 
@@ -235,8 +235,32 @@ OllyDbg로 까보면 Stage를 구별할 수 있는 부분이 있습니다.
 
 이렇게 10stage까지가면 flag를 얻을 수 있다.
 
-Flag
+FLAG : FLAG{Y0ur_p4t1enc3_1s_gr3at!} 
 
+## LOGIN 50p (Web)
+
+```
+로그인 페이지인데 로그인이 안된다... 
+로그인을 성공하고 짱해커가 되어보자!!
+Hint : Array, length<6
+Hint2 : Get으로 배열을 전송하는 방법, sql injection
+```
+
+링크를 타고 들어가보면 그냥 flag가 있다. base64로 5번 디코딩해주면 된다.
+
+FLAG : FLAG{jjang_easy} 
+
+## 보물찾기 149p (Web)
+
+```
+홈페이지 내에 존재하는 플레그를 찾아보세염!
+```
+
+그냥 홈페이지에 존재하는 플래그를 찾으면 된다.
+http://sdhsroot.kro.kr/vendor/bootstrap/css/bootstrap.min.css
+플래그는 얄밉게 부트스트랩에 들어있었다.
+
+FLAG : FLAG{bootstrap_1s_jj4ng}
 
 
 
