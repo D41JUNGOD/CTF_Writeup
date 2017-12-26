@@ -1,3 +1,10 @@
+## Profile
+
+Rank : 20
+
+Nickname : BAOBAB_D41JUNGOD
+
+
 ## Welcome 50p (MISC)
 
 ```
@@ -211,7 +218,7 @@ HxD 로 열어보면 끝 쪽에 사진의 높이를 1000px로 변경해달라는
 
 이 파일은 확장자가 PNG이다. PNG는 기본적으로 파일헤더에 넓이와 높이를 설정할 수 있게 들어 있다. 변경해주면 된다.
 
-![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/pleas_find.png)
+![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/pleas_find.PNG)
 
 FLAG : FLAG{_1vErticAl_2rEADiNg_3TAStlSb} 
 
