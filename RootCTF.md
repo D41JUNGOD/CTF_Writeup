@@ -225,7 +225,7 @@ hint : Sleep
 
 OllyDbg로 까보면 Stage를 구별할 수 있는 부분이 있습니다.
 
-![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/pleas_find.PNG)
+![ex_screenshot](https://github.com/D41JUNGOD/CTF/blob/master/jpg/olly1.PNG)
 
 그리고 그 안을 스텝 인투로 들어가보면 결정적인 Sleep 함수가 있는 부분을 찾을 수 있다.
 
@@ -258,6 +258,7 @@ FLAG : FLAG{jjang_easy}
 
 그냥 홈페이지에 존재하는 플래그를 찾으면 된다.
 http://sdhsroot.kro.kr/vendor/bootstrap/css/bootstrap.min.css
+
 플래그는 얄밉게 부트스트랩에 들어있었다.
 
 FLAG : FLAG{bootstrap_1s_jj4ng}
