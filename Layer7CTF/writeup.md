@@ -14,7 +14,7 @@ Name : 권예준(선린인터넷고)
 
 슥슥삭삭
 
-####FLAG : LAYER7{1_h0pE_Y0u_eNj0y_p14yiNg!}
+#### FLAG : LAYER7{1_h0pE_Y0u_eNj0y_p14yiNg!}
 
 ## Shell program - 200pt
 
@@ -49,7 +49,7 @@ ping에서 "" 쌍따옴표를 이용해서 system 함수를 호출하기 때문�
 
 $($SHELL 1>&0) 으로 쉘을 따고 플래그 파일을 읽어올 수 있었다.
 
-####FLAG : LAYER7{Wha4AAa4t_d03$_th1$_ch4r4ct3r_r3tuuuuurn?_$$$}
+#### FLAG : LAYER7{Wha4AAa4t_d03$_th1$_ch4r4ct3r_r3tuuuuurn?_$$$}
 
 ## Shell program revenge - 275pt
 
@@ -196,7 +196,7 @@ p.sendline(bin_sh)
 p.interactive()
 ```
 
-####FLAG : LAYER7{1_r3411y_H4t3_t41m0_^______^}
+#### FLAG : LAYER7{1_r3411y_H4t3_t41m0_^______^}
 
 
 ## Life game - 150pt
@@ -303,7 +303,7 @@ for i in range(1,12):
 print(flag)
 ```
 
-####FLAG : LAYER7{L1f3..1s..P0k3m0n_or_D1g1m0n..wh4t}
+#### FLAG : LAYER7{L1f3..1s..P0k3m0n_or_D1g1m0n..wh4t}
 
 # Web
 
