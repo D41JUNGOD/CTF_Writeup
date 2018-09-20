@@ -8,7 +8,7 @@ NickName : Dflower
 
 Name : 권예준(선린인터넷고)
 
-# MISC
+## MISC
 
 ### Sanity Check - 1pt
 
@@ -49,9 +49,9 @@ ping에서 "" 쌍따옴표를 이용해서 system 함수를 호출하기 때문�
 
 $($SHELL 1>&0) 으로 쉘을 따고 플래그 파일을 읽어올 수 있었다.
 
-#### FLAG : LAYER7{Wha4AAa4t_d03$_th1$_ch4r4ct3r_r3tuuuuurn?_$$$}
+####FLAG : LAYER7{Wha4AAa4t_d03$_th1$_ch4r4ct3r_r3tuuuuurn?_$$$}
 
-### Shell program revenge - 275pt
+## Shell program revenge - 275pt
 
 출제자가 처음에 낸 문제가 생각보다 많이 풀려서 그런지 revenge로 다시낸 듯 하다.
 
@@ -105,11 +105,12 @@ const char *set_env()
 
 하지만 PATH가 제대로 지워지지 않았나 보다. 
 
-$(vi 1>&0) 로 FTZ 풀 때의 기억을 살려서 풀었다.
+$(vi 1>&0) 로 플래그 파일을 읽어올 수 있었다.
 
-#### FLAG : asdf
+#### FLAG : LAYER7{w0W...H0w_t0_th1s_Fuck11111111ng_fi1t3r1ng_by-
+p4ss!!!!!!!!!???}
 
-# Pwn
+## Pwn
 
 ### talmoru_party~! - 100pt
 
@@ -305,7 +306,7 @@ print(flag)
 
 #### FLAG : LAYER7{L1f3..1s..P0k3m0n_or_D1g1m0n..wh4t}
 
-# Web
+## Web
 
 ### url routing - 150pt
 
