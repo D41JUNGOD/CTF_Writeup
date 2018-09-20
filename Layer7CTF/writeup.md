@@ -10,13 +10,13 @@ Name : 권예준(선린인터넷고)
 
 # MISC
 
-## Sanity Check - 1pt
+### Sanity Check - 1pt
 
 슥슥삭삭
 
 #### FLAG : LAYER7{1_h0pE_Y0u_eNj0y_p14yiNg!}
 
-## Shell program - 200pt
+### Shell program - 200pt
 
 ```
 fliter = "|\\\"'`@c~!*?-_+=,";
@@ -51,7 +51,7 @@ $($SHELL 1>&0) 으로 쉘을 따고 플래그 파일을 읽어올 수 있었다.
 
 #### FLAG : LAYER7{Wha4AAa4t_d03$_th1$_ch4r4ct3r_r3tuuuuurn?_$$$}
 
-## Shell program revenge - 275pt
+### Shell program revenge - 275pt
 
 출제자가 처음에 낸 문제가 생각보다 많이 풀려서 그런지 revenge로 다시낸 듯 하다.
 
@@ -111,7 +111,7 @@ $(vi 1>&0) 로 FTZ 풀 때의 기억을 살려서 풀었다.
 
 # Pwn
 
-## talmoru_party~! - 100pt
+### talmoru_party~! - 100pt
 
 ```
 Welcome to talmo world!!!
@@ -199,7 +199,7 @@ p.interactive()
 #### FLAG : LAYER7{1_r3411y_H4t3_t41m0_^______^}
 
 
-## Life game - 150pt
+### Life game - 150pt
 
 바이너리를 열어보면 은행시스템과 돈을 벌 수 있는 메뉴들이 보이고 또 31337이라는 특별한 메뉴가 보인다.
 
@@ -307,7 +307,7 @@ print(flag)
 
 # Web
 
-## url routing - 150pt
+### url routing - 150pt
 
 ```
 http://dm1536803965686.fun25.co.kr:23902/5099d288498b4e17/?%66%6c%61%67
@@ -323,7 +323,7 @@ http://dm1536803965686.fun25.co.kr:23902/5099d288498b4e17/?flag
 
 #### FLAG : LAYER7{4f3a6c9f4b9c36ed3c39b8d3e14aa4fb}
 
-## meow
+### meow
 
 ```
 <?php 
